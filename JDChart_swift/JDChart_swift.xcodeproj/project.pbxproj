@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8BF1F06501400FE8974 /* AppDelegate.swift */; };
+		42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8C11F06501400FE8974 /* ViewController.swift */; };
+		42E0F8C51F06501400FE8974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E0F8C31F06501400FE8974 /* Main.storyboard */; };
+		42E0F8C71F06501400FE8974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E0F8C61F06501400FE8974 /* Assets.xcassets */; };
+		42E0F8CA1F06501400FE8974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E0F8C81F06501400FE8974 /* LaunchScreen.storyboard */; };
+		42E0F8D51F06501400FE8974 /* JDChart_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8D41F06501400FE8974 /* JDChart_swiftTests.swift */; };
+		42E0F8E01F06501400FE8974 /* JDChart_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8DF1F06501400FE8974 /* JDChart_swiftUITests.swift */; };
+		42E0F8F01F065BB000FE8974 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8EF1F065BB000FE8974 /* ChartVC.swift */; };
+		42E0F8F21F06875400FE8974 /* chartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8F11F06875400FE8974 /* chartManager.swift */; };
+		42E0F8F41F068EC800FE8974 /* chartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8F31F068EC800FE8974 /* chartVM.swift */; };
+		42E0F8F71F068F1100FE8974 /* netManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8F61F068F1100FE8974 /* netManager.swift */; };
+		A56D40535FC1EA3F39F61DB7 /* Pods_JDChart_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50450B1C611043344611F783 /* Pods_JDChart_swift.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42E0F8D11F06501400FE8974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42E0F8B41F06501400FE8974 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42E0F8BB1F06501400FE8974;
+			remoteInfo = JDChart_swift;
+		};
+		42E0F8DC1F06501400FE8974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42E0F8B41F06501400FE8974 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42E0F8BB1F06501400FE8974;
+			remoteInfo = JDChart_swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42E0F8BC1F06501400FE8974 /* JDChart_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDChart_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E0F8BF1F06501400FE8974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42E0F8C11F06501400FE8974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42E0F8C41F06501400FE8974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42E0F8C61F06501400FE8974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42E0F8C91F06501400FE8974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42E0F8CB1F06501400FE8974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42E0F8D01F06501400FE8974 /* JDChart_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDChart_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E0F8D41F06501400FE8974 /* JDChart_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDChart_swiftTests.swift; sourceTree = "<group>"; };
+		42E0F8D61F06501400FE8974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42E0F8DB1F06501400FE8974 /* JDChart_swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDChart_swiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E0F8DF1F06501400FE8974 /* JDChart_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDChart_swiftUITests.swift; sourceTree = "<group>"; };
+		42E0F8E11F06501400FE8974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42E0F8EF1F065BB000FE8974 /* ChartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
+		42E0F8F11F06875400FE8974 /* chartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartManager.swift; sourceTree = "<group>"; };
+		42E0F8F31F068EC800FE8974 /* chartVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartVM.swift; sourceTree = "<group>"; };
+		42E0F8F61F068F1100FE8974 /* netManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = netManager.swift; sourceTree = "<group>"; };
+		50450B1C611043344611F783 /* Pods_JDChart_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JDChart_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74D3BA9B715C1C06076B2982 /* Pods-JDChart_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDChart_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JDChart_swift/Pods-JDChart_swift.debug.xcconfig"; sourceTree = "<group>"; };
+		8FEE69B4FB05801890600516 /* Pods-JDChart_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDChart_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-JDChart_swift/Pods-JDChart_swift.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42E0F8B91F06501400FE8974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56D40535FC1EA3F39F61DB7 /* Pods_JDChart_swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E0F8CD1F06501400FE8974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E0F8D81F06501400FE8974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D0AFB8A3B91A4F97408226C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74D3BA9B715C1C06076B2982 /* Pods-JDChart_swift.debug.xcconfig */,
+				8FEE69B4FB05801890600516 /* Pods-JDChart_swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		42E0F8B31F06501400FE8974 = {
+			isa = PBXGroup;
+			children = (
+				42E0F8BE1F06501400FE8974 /* JDChart_swift */,
+				42E0F8D31F06501400FE8974 /* JDChart_swiftTests */,
+				42E0F8DE1F06501400FE8974 /* JDChart_swiftUITests */,
+				42E0F8BD1F06501400FE8974 /* Products */,
+				3D0AFB8A3B91A4F97408226C /* Pods */,
+				8B2FE6E8E22C551A4FD27E8A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		42E0F8BD1F06501400FE8974 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42E0F8BC1F06501400FE8974 /* JDChart_swift.app */,
+				42E0F8D01F06501400FE8974 /* JDChart_swiftTests.xctest */,
+				42E0F8DB1F06501400FE8974 /* JDChart_swiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42E0F8BE1F06501400FE8974 /* JDChart_swift */ = {
+			isa = PBXGroup;
+			children = (
+				42E0F8F51F068EDB00FE8974 /* Tools */,
+				42E0F8EE1F065B2900FE8974 /* chart */,
+				42E0F8BF1F06501400FE8974 /* AppDelegate.swift */,
+				42E0F8C11F06501400FE8974 /* ViewController.swift */,
+				42E0F8C31F06501400FE8974 /* Main.storyboard */,
+				42E0F8C61F06501400FE8974 /* Assets.xcassets */,
+				42E0F8C81F06501400FE8974 /* LaunchScreen.storyboard */,
+				42E0F8CB1F06501400FE8974 /* Info.plist */,
+			);
+			path = JDChart_swift;
+			sourceTree = "<group>";
+		};
+		42E0F8D31F06501400FE8974 /* JDChart_swiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				42E0F8D41F06501400FE8974 /* JDChart_swiftTests.swift */,
+				42E0F8D61F06501400FE8974 /* Info.plist */,
+			);
+			path = JDChart_swiftTests;
+			sourceTree = "<group>";
+		};
+		42E0F8DE1F06501400FE8974 /* JDChart_swiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				42E0F8DF1F06501400FE8974 /* JDChart_swiftUITests.swift */,
+				42E0F8E11F06501400FE8974 /* Info.plist */,
+			);
+			path = JDChart_swiftUITests;
+			sourceTree = "<group>";
+		};
+		42E0F8EE1F065B2900FE8974 /* chart */ = {
+			isa = PBXGroup;
+			children = (
+				42E655051F069C5100C2E1E5 /* models */,
+				42E0F8EF1F065BB000FE8974 /* ChartVC.swift */,
+				42E0F8F11F06875400FE8974 /* chartManager.swift */,
+				42E0F8F31F068EC800FE8974 /* chartVM.swift */,
+			);
+			path = chart;
+			sourceTree = "<group>";
+		};
+		42E0F8F51F068EDB00FE8974 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				42E0F8F61F068F1100FE8974 /* netManager.swift */,
+			);
+			name = Tools;
+			path = tools;
+			sourceTree = "<group>";
+		};
+		42E655051F069C5100C2E1E5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		8B2FE6E8E22C551A4FD27E8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50450B1C611043344611F783 /* Pods_JDChart_swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42E0F8BB1F06501400FE8974 /* JDChart_swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E0F8E41F06501400FE8974 /* Build configuration list for PBXNativeTarget "JDChart_swift" */;
+			buildPhases = (
+				43F037AA41EDC9D5C39F6B47 /* [CP] Check Pods Manifest.lock */,
+				42E0F8B81F06501400FE8974 /* Sources */,
+				42E0F8B91F06501400FE8974 /* Frameworks */,
+				42E0F8BA1F06501400FE8974 /* Resources */,
+				5D0C955D7FA5024534F19A86 /* [CP] Embed Pods Frameworks */,
+				1889D058ABE34B76F2C66809 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JDChart_swift;
+			productName = JDChart_swift;
+			productReference = 42E0F8BC1F06501400FE8974 /* JDChart_swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42E0F8CF1F06501400FE8974 /* JDChart_swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E0F8E71F06501400FE8974 /* Build configuration list for PBXNativeTarget "JDChart_swiftTests" */;
+			buildPhases = (
+				42E0F8CC1F06501400FE8974 /* Sources */,
+				42E0F8CD1F06501400FE8974 /* Frameworks */,
+				42E0F8CE1F06501400FE8974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42E0F8D21F06501400FE8974 /* PBXTargetDependency */,
+			);
+			name = JDChart_swiftTests;
+			productName = JDChart_swiftTests;
+			productReference = 42E0F8D01F06501400FE8974 /* JDChart_swiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		42E0F8DA1F06501400FE8974 /* JDChart_swiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E0F8EA1F06501400FE8974 /* Build configuration list for PBXNativeTarget "JDChart_swiftUITests" */;
+			buildPhases = (
+				42E0F8D71F06501400FE8974 /* Sources */,
+				42E0F8D81F06501400FE8974 /* Frameworks */,
+				42E0F8D91F06501400FE8974 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42E0F8DD1F06501400FE8974 /* PBXTargetDependency */,
+			);
+			name = JDChart_swiftUITests;
+			productName = JDChart_swiftUITests;
+			productReference = 42E0F8DB1F06501400FE8974 /* JDChart_swiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42E0F8B41F06501400FE8974 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = liuhang;
+				TargetAttributes = {
+					42E0F8BB1F06501400FE8974 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4VYWXNWNTK;
+						ProvisioningStyle = Automatic;
+					};
+					42E0F8CF1F06501400FE8974 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4VYWXNWNTK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 42E0F8BB1F06501400FE8974;
+					};
+					42E0F8DA1F06501400FE8974 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4VYWXNWNTK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 42E0F8BB1F06501400FE8974;
+					};
+				};
+			};
+			buildConfigurationList = 42E0F8B71F06501400FE8974 /* Build configuration list for PBXProject "JDChart_swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42E0F8B31F06501400FE8974;
+			productRefGroup = 42E0F8BD1F06501400FE8974 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42E0F8BB1F06501400FE8974 /* JDChart_swift */,
+				42E0F8CF1F06501400FE8974 /* JDChart_swiftTests */,
+				42E0F8DA1F06501400FE8974 /* JDChart_swiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42E0F8BA1F06501400FE8974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E0F8CA1F06501400FE8974 /* LaunchScreen.storyboard in Resources */,
+				42E0F8C71F06501400FE8974 /* Assets.xcassets in Resources */,
+				42E0F8C51F06501400FE8974 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E0F8CE1F06501400FE8974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E0F8D91F06501400FE8974 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1889D058ABE34B76F2C66809 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JDChart_swift/Pods-JDChart_swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43F037AA41EDC9D5C39F6B47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D0C955D7FA5024534F19A86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JDChart_swift/Pods-JDChart_swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42E0F8B81F06501400FE8974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E0F8F41F068EC800FE8974 /* chartVM.swift in Sources */,
+				42E0F8F01F065BB000FE8974 /* ChartVC.swift in Sources */,
+				42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */,
+				42E0F8F21F06875400FE8974 /* chartManager.swift in Sources */,
+				42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */,
+				42E0F8F71F068F1100FE8974 /* netManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E0F8CC1F06501400FE8974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E0F8D51F06501400FE8974 /* JDChart_swiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E0F8D71F06501400FE8974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E0F8E01F06501400FE8974 /* JDChart_swiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42E0F8D21F06501400FE8974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42E0F8BB1F06501400FE8974 /* JDChart_swift */;
+			targetProxy = 42E0F8D11F06501400FE8974 /* PBXContainerItemProxy */;
+		};
+		42E0F8DD1F06501400FE8974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42E0F8BB1F06501400FE8974 /* JDChart_swift */;
+			targetProxy = 42E0F8DC1F06501400FE8974 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42E0F8C31F06501400FE8974 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E0F8C41F06501400FE8974 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42E0F8C81F06501400FE8974 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E0F8C91F06501400FE8974 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42E0F8E21F06501400FE8974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42E0F8E31F06501400FE8974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42E0F8E51F06501400FE8974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D3BA9B715C1C06076B2982 /* Pods-JDChart_swift.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4VYWXNWNTK;
+				INFOPLIST_FILE = JDChart_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		42E0F8E61F06501400FE8974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FEE69B4FB05801890600516 /* Pods-JDChart_swift.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4VYWXNWNTK;
+				INFOPLIST_FILE = JDChart_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		42E0F8E81F06501400FE8974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4VYWXNWNTK;
+				INFOPLIST_FILE = JDChart_swiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDChart_swift.app/JDChart_swift";
+			};
+			name = Debug;
+		};
+		42E0F8E91F06501400FE8974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4VYWXNWNTK;
+				INFOPLIST_FILE = JDChart_swiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDChart_swift.app/JDChart_swift";
+			};
+			name = Release;
+		};
+		42E0F8EB1F06501400FE8974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4VYWXNWNTK;
+				INFOPLIST_FILE = JDChart_swiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = JDChart_swift;
+			};
+			name = Debug;
+		};
+		42E0F8EC1F06501400FE8974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4VYWXNWNTK;
+				INFOPLIST_FILE = JDChart_swiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = JDChart_swift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42E0F8B71F06501400FE8974 /* Build configuration list for PBXProject "JDChart_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E0F8E21F06501400FE8974 /* Debug */,
+				42E0F8E31F06501400FE8974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E0F8E41F06501400FE8974 /* Build configuration list for PBXNativeTarget "JDChart_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E0F8E51F06501400FE8974 /* Debug */,
+				42E0F8E61F06501400FE8974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E0F8E71F06501400FE8974 /* Build configuration list for PBXNativeTarget "JDChart_swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E0F8E81F06501400FE8974 /* Debug */,
+				42E0F8E91F06501400FE8974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E0F8EA1F06501400FE8974 /* Build configuration list for PBXNativeTarget "JDChart_swiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E0F8EB1F06501400FE8974 /* Debug */,
+				42E0F8EC1F06501400FE8974 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42E0F8B41F06501400FE8974 /* Project object */;
+}
