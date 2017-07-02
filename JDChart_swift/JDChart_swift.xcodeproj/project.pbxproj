@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420633F61F08B552002220CA /* netManager+extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420633F51F08B552002220CA /* netManager+extesion.swift */; };
 		42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8BF1F06501400FE8974 /* AppDelegate.swift */; };
 		42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8C11F06501400FE8974 /* ViewController.swift */; };
 		42E0F8C51F06501400FE8974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E0F8C31F06501400FE8974 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		420633F51F08B552002220CA /* netManager+extesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "netManager+extesion.swift"; sourceTree = "<group>"; };
 		42E0F8BC1F06501400FE8974 /* JDChart_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDChart_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E0F8BF1F06501400FE8974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E0F8C11F06501400FE8974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				42E0F8F61F068F1100FE8974 /* netManager.swift */,
+				420633F51F08B552002220CA /* netManager+extesion.swift */,
 			);
 			name = Tools;
 			path = tools;
@@ -258,6 +261,7 @@
 					42E0F8BB1F06501400FE8974 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 4VYWXNWNTK;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					42E0F8CF1F06501400FE8974 = {
@@ -378,6 +382,7 @@
 				42E0F8F01F065BB000FE8974 /* ChartVC.swift in Sources */,
 				42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */,
 				42E0F8F21F06875400FE8974 /* chartManager.swift in Sources */,
+				420633F61F08B552002220CA /* netManager+extesion.swift in Sources */,
 				42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */,
 				42E0F8F71F068F1100FE8974 /* netManager.swift in Sources */,
 			);
@@ -535,11 +540,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4VYWXNWNTK;
 				INFOPLIST_FILE = JDChart_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -550,8 +558,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4VYWXNWNTK;
 				INFOPLIST_FILE = JDChart_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";

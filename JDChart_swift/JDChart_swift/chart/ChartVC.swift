@@ -7,11 +7,16 @@
 //
 
 import UIKit
-
+import Alamofire
 class ChartVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        netManager.shared.getChartList { (response) in
+            print(response)
+        }
+        
         //MARK UI
         setupUI()
     }
