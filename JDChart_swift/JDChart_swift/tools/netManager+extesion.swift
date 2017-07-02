@@ -8,16 +8,27 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 extension netManager {
     //购物车数据
-    func getChartList(completion:@escaping (_ response: AnyObject) -> ()) {
-        mainRequest(urlStr: "http://httpbin.org", httpMethod: .POST, parameters: nil, completion: { (isSuccess,response) in
-            if isSuccess {
-                completion(response!)
-            }else {
-                print("请求失败")
-            }
-        })
+    func getChartList(completion:@escaping (_ response: RootClass) -> ()) {
+        
+        let pathf = Bundle.main.path(forResource: "chartString", ofType: "txt")!
+        let jsonStr = try! String(contentsOfFile: pathf)
+        
+        
+        let jsonData = JSON.init(parseJSON: jsonStr)
+        
+        let  rootClass = RootClass.init(fromJson: jsonData)
+        
+        completion(rootClass)
+        
+//        mainRequest(urlStr: "https://api.m.jd.com/client.action?functionId=cart", httpMethod: .GET, parameters: nil, completion: { (isSuccess,response) in
+//            if isSuccess {
+//                completion(response!)
+//            }else {
+//                print("购物车数据请求失败")
+//            }
+//        })
     }
 }

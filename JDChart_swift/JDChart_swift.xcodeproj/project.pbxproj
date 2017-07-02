@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		420633F61F08B552002220CA /* netManager+extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420633F51F08B552002220CA /* netManager+extesion.swift */; };
+		420633FA1F08DB8C002220CA /* charles-ssl-proxying.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 420633F91F08DB8C002220CA /* charles-ssl-proxying.p12 */; };
+		420633FC1F092431002220CA /* chartString.txt in Resources */ = {isa = PBXBuildFile; fileRef = 420633FB1F092431002220CA /* chartString.txt */; };
+		4206340B1F0929A2002220CA /* CardsNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420633FE1F0929A2002220CA /* CardsNotice.swift */; };
+		4206340C1F0929A2002220CA /* CartInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420633FF1F0929A2002220CA /* CartInfo.swift */; };
+		4206340D1F0929A2002220CA /* ConfigCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634001F0929A2002220CA /* ConfigCard.swift */; };
+		4206340E1F0929A2002220CA /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634011F0929A2002220CA /* Elem.swift */; };
+		4206340F1F0929A2002220CA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634021F0929A2002220CA /* Item.swift */; };
+		420634101F0929A2002220CA /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634031F0929A2002220CA /* Notice.swift */; };
+		420634111F0929A2002220CA /* PriceTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634041F0929A2002220CA /* PriceTop.swift */; };
+		420634121F0929A2002220CA /* PropertyTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634051F0929A2002220CA /* PropertyTag.swift */; };
+		420634131F0929A2002220CA /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634061F0929A2002220CA /* RootClass.swift */; };
+		420634141F0929A2002220CA /* SkuLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634071F0929A2002220CA /* SkuLabel.swift */; };
+		420634151F0929A2002220CA /* Sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634081F0929A2002220CA /* Sorted.swift */; };
+		420634161F0929A2002220CA /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634091F0929A2002220CA /* Vendor.swift */; };
+		420634181F092F19002220CA /* AbCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634171F092F19002220CA /* AbCard.swift */; };
 		42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8BF1F06501400FE8974 /* AppDelegate.swift */; };
 		42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8C11F06501400FE8974 /* ViewController.swift */; };
 		42E0F8C51F06501400FE8974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E0F8C31F06501400FE8974 /* Main.storyboard */; };
@@ -41,6 +56,21 @@
 
 /* Begin PBXFileReference section */
 		420633F51F08B552002220CA /* netManager+extesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "netManager+extesion.swift"; sourceTree = "<group>"; };
+		420633F91F08DB8C002220CA /* charles-ssl-proxying.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "charles-ssl-proxying.p12"; sourceTree = "<group>"; };
+		420633FB1F092431002220CA /* chartString.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = chartString.txt; sourceTree = "<group>"; };
+		420633FE1F0929A2002220CA /* CardsNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsNotice.swift; sourceTree = "<group>"; };
+		420633FF1F0929A2002220CA /* CartInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartInfo.swift; sourceTree = "<group>"; };
+		420634001F0929A2002220CA /* ConfigCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigCard.swift; sourceTree = "<group>"; };
+		420634011F0929A2002220CA /* Elem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
+		420634021F0929A2002220CA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		420634031F0929A2002220CA /* Notice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		420634041F0929A2002220CA /* PriceTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceTop.swift; sourceTree = "<group>"; };
+		420634051F0929A2002220CA /* PropertyTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTag.swift; sourceTree = "<group>"; };
+		420634061F0929A2002220CA /* RootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
+		420634071F0929A2002220CA /* SkuLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkuLabel.swift; sourceTree = "<group>"; };
+		420634081F0929A2002220CA /* Sorted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sorted.swift; sourceTree = "<group>"; };
+		420634091F0929A2002220CA /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		420634171F092F19002220CA /* AbCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbCard.swift; sourceTree = "<group>"; };
 		42E0F8BC1F06501400FE8974 /* JDChart_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDChart_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E0F8BF1F06501400FE8974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E0F8C11F06501400FE8974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +186,7 @@
 		42E0F8EE1F065B2900FE8974 /* chart */ = {
 			isa = PBXGroup;
 			children = (
+				420633FB1F092431002220CA /* chartString.txt */,
 				42E655051F069C5100C2E1E5 /* models */,
 				42E0F8EF1F065BB000FE8974 /* ChartVC.swift */,
 				42E0F8F11F06875400FE8974 /* chartManager.swift */,
@@ -167,6 +198,7 @@
 		42E0F8F51F068EDB00FE8974 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				420633F91F08DB8C002220CA /* charles-ssl-proxying.p12 */,
 				42E0F8F61F068F1100FE8974 /* netManager.swift */,
 				420633F51F08B552002220CA /* netManager+extesion.swift */,
 			);
@@ -177,6 +209,19 @@
 		42E655051F069C5100C2E1E5 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				420634171F092F19002220CA /* AbCard.swift */,
+				420633FE1F0929A2002220CA /* CardsNotice.swift */,
+				420633FF1F0929A2002220CA /* CartInfo.swift */,
+				420634001F0929A2002220CA /* ConfigCard.swift */,
+				420634011F0929A2002220CA /* Elem.swift */,
+				420634021F0929A2002220CA /* Item.swift */,
+				420634031F0929A2002220CA /* Notice.swift */,
+				420634041F0929A2002220CA /* PriceTop.swift */,
+				420634051F0929A2002220CA /* PropertyTag.swift */,
+				420634061F0929A2002220CA /* RootClass.swift */,
+				420634071F0929A2002220CA /* SkuLabel.swift */,
+				420634081F0929A2002220CA /* Sorted.swift */,
+				420634091F0929A2002220CA /* Vendor.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -304,8 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E0F8CA1F06501400FE8974 /* LaunchScreen.storyboard in Resources */,
+				420633FC1F092431002220CA /* chartString.txt in Resources */,
 				42E0F8C71F06501400FE8974 /* Assets.xcassets in Resources */,
 				42E0F8C51F06501400FE8974 /* Main.storyboard in Resources */,
+				420633FA1F08DB8C002220CA /* charles-ssl-proxying.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,12 +425,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4206340E1F0929A2002220CA /* Elem.swift in Sources */,
 				42E0F8F41F068EC800FE8974 /* chartVM.swift in Sources */,
+				420634151F0929A2002220CA /* Sorted.swift in Sources */,
+				4206340C1F0929A2002220CA /* CartInfo.swift in Sources */,
+				420634111F0929A2002220CA /* PriceTop.swift in Sources */,
+				420634101F0929A2002220CA /* Notice.swift in Sources */,
 				42E0F8F01F065BB000FE8974 /* ChartVC.swift in Sources */,
 				42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */,
+				420634181F092F19002220CA /* AbCard.swift in Sources */,
+				4206340B1F0929A2002220CA /* CardsNotice.swift in Sources */,
 				42E0F8F21F06875400FE8974 /* chartManager.swift in Sources */,
+				4206340F1F0929A2002220CA /* Item.swift in Sources */,
+				420634141F0929A2002220CA /* SkuLabel.swift in Sources */,
+				420634131F0929A2002220CA /* RootClass.swift in Sources */,
 				420633F61F08B552002220CA /* netManager+extesion.swift in Sources */,
 				42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */,
+				420634121F0929A2002220CA /* PropertyTag.swift in Sources */,
+				420634161F0929A2002220CA /* Vendor.swift in Sources */,
+				4206340D1F0929A2002220CA /* ConfigCard.swift in Sources */,
 				42E0F8F71F068F1100FE8974 /* netManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

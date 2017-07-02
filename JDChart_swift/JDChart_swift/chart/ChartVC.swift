@@ -13,8 +13,8 @@ class ChartVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        netManager.shared.getChartList { (response) in
-            print(response)
+        netManager.shared.getChartList { (rootClass) in
+            print(rootClass.cartInfo.specialId)
         }
         
         //MARK UI
