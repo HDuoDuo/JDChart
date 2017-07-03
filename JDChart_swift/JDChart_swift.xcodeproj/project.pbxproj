@@ -23,6 +23,9 @@
 		420634151F0929A2002220CA /* Sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634081F0929A2002220CA /* Sorted.swift */; };
 		420634161F0929A2002220CA /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634091F0929A2002220CA /* Vendor.swift */; };
 		420634181F092F19002220CA /* AbCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634171F092F19002220CA /* AbCard.swift */; };
+		420634201F0955E1002220CA /* chartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206341E1F0955E1002220CA /* chartViewCell.swift */; };
+		420634211F0955E1002220CA /* chartViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4206341F1F0955E1002220CA /* chartViewCell.xib */; };
+		4212CA191F0A571600882257 /* chartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212CA181F0A571600882257 /* chartHeaderView.swift */; };
 		42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8BF1F06501400FE8974 /* AppDelegate.swift */; };
 		42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8C11F06501400FE8974 /* ViewController.swift */; };
 		42E0F8C51F06501400FE8974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E0F8C31F06501400FE8974 /* Main.storyboard */; };
@@ -71,6 +74,9 @@
 		420634081F0929A2002220CA /* Sorted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sorted.swift; sourceTree = "<group>"; };
 		420634091F0929A2002220CA /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		420634171F092F19002220CA /* AbCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbCard.swift; sourceTree = "<group>"; };
+		4206341E1F0955E1002220CA /* chartViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewCell.swift; sourceTree = "<group>"; };
+		4206341F1F0955E1002220CA /* chartViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = chartViewCell.xib; sourceTree = "<group>"; };
+		4212CA181F0A571600882257 /* chartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartHeaderView.swift; sourceTree = "<group>"; };
 		42E0F8BC1F06501400FE8974 /* JDChart_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDChart_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E0F8BF1F06501400FE8974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42E0F8C11F06501400FE8974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +132,16 @@
 				8FEE69B4FB05801890600516 /* Pods-JDChart_swift.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		420634191F095337002220CA /* views */ = {
+			isa = PBXGroup;
+			children = (
+				4206341E1F0955E1002220CA /* chartViewCell.swift */,
+				4206341F1F0955E1002220CA /* chartViewCell.xib */,
+				4212CA181F0A571600882257 /* chartHeaderView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		42E0F8B31F06501400FE8974 = {
@@ -186,6 +202,7 @@
 		42E0F8EE1F065B2900FE8974 /* chart */ = {
 			isa = PBXGroup;
 			children = (
+				420634191F095337002220CA /* views */,
 				420633FB1F092431002220CA /* chartString.txt */,
 				42E655051F069C5100C2E1E5 /* models */,
 				42E0F8EF1F065BB000FE8974 /* ChartVC.swift */,
@@ -353,6 +370,7 @@
 				42E0F8C71F06501400FE8974 /* Assets.xcassets in Resources */,
 				42E0F8C51F06501400FE8974 /* Main.storyboard in Resources */,
 				420633FA1F08DB8C002220CA /* charles-ssl-proxying.p12 in Resources */,
+				420634211F0955E1002220CA /* chartViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +457,9 @@
 				4206340F1F0929A2002220CA /* Item.swift in Sources */,
 				420634141F0929A2002220CA /* SkuLabel.swift in Sources */,
 				420634131F0929A2002220CA /* RootClass.swift in Sources */,
+				420634201F0955E1002220CA /* chartViewCell.swift in Sources */,
 				420633F61F08B552002220CA /* netManager+extesion.swift in Sources */,
+				4212CA191F0A571600882257 /* chartHeaderView.swift in Sources */,
 				42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */,
 				420634121F0929A2002220CA /* PropertyTag.swift in Sources */,
 				420634161F0929A2002220CA /* Vendor.swift in Sources */,
