@@ -10,4 +10,12 @@ import UIKit
 
 class chartVM: NSObject {
     
+    var venders: [Vendor] = []
+    
+    func getChartData(completion: @escaping (_ venders: [Vendor])->()) {
+        netManager.shared.getChartList {[weak self] (response) in
+            self?.venders = response.vendors
+            completion(response.vendors)
+        }
+    }
 }

@@ -9,25 +9,28 @@
 import UIKit
 import Alamofire
 class ChartVC: UIViewController,UITableViewDelegate,UITableViewDataSource,headerDelegate {
-    var viewModel = chartVM()
+    
+    var viewModel = chartVM()//视图模型
     var tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), style: UITableViewStyle.plain)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //MARK UI
         setupUI()
+        //数据设置
+        dataSetup()
     }
-    
-    
     func setupUI() {
-        //uicollectionView
+        //uicollectionView  代理设置
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 50
-        tableView.register(UINib.init(nibName: "chartViewCell", bundle: nil), forCellReuseIdentifier: "reuseChartCell")
+        //cell
+        tableView.register(chartViewCell.self, forCellReuseIdentifier: "reuseChartCell")
+        //header
         tableView.register(chartHeaderView.self, forHeaderFooterViewReuseIdentifier: "reuseHeaderView")
+        
         //UIBarButton_left
         self.title = "购物车"
         let navItem = UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(ChartVC.backVC))
@@ -37,24 +40,32 @@ class ChartVC: UIViewController,UITableViewDelegate,UITableViewDataSource,header
         let messageItem = UIBarButtonItem.init(title: "消息", style: .plain, target: self, action: #selector(ChartVC.message))
         navigationItem.rightBarButtonItems = [editItem,messageItem]
     }
-    
-    
-    
+    //数据设置(网络请求有延迟，采用闭包刷新)
+    func dataSetup() {
+        viewModel.getChartData {[weak self] venders in
+            self?.tableView.reloadData()
+        }
+    }
+
     
     //MARK  UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "reuseHeaderView") as! chartHeaderView
+        headerView.vender = viewModel.venders[section]
         headerView.delegate = self
         return headerView
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 38
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.venders[section].sorted.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return viewModel.venders.count
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 20
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseChartCell", for: indexPath)

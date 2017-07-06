@@ -13,6 +13,16 @@ protocol headerDelegate: NSObjectProtocol {
 class chartHeaderView: UITableViewHeaderFooterView {
     //代理
     weak var delegate: headerDelegate?
+    var  name_store = UILabel()//商铺名称
+    var img_store = UIImageView()
+    
+    var vender: Vendor? {
+        didSet {
+            name_store.text = vender!.shopName
+            let imgStr = vender!.vendorType == 0 ? "serviceComment_pop" : "serviceComment_jd"
+            img_store.image = UIImage(named: imgStr)
+        }
+    }
     
     override func draw(_ rect: CGRect) {
         setupUI(rect)
@@ -21,15 +31,17 @@ class chartHeaderView: UITableViewHeaderFooterView {
     func setupUI(_ rect: CGRect) {
         print(rect)
         //btn
-        let button = UIButton.init(frame: CGRect.init(x: 10, y: 5, width: 20, height: 20))
-        button.setBackgroundImage(UIImage(named: "rankhome-icarousel-other"), for: .normal)
-        button.setBackgroundImage(UIImage.init(named: "syncart_round_check2New"), for: .selected)
-        button.addTarget(self, action: #selector(chartHeaderView.btnOnclicked(sender:)), for: .touchUpInside)
-        contentView.addSubview(button)
+        let button_choice = UIButton.init(frame: CGRect.init(x: 8, y: 10, width: 22, height: 22))
+        button_choice.setBackgroundImage(UIImage(named: "rankhome-icarousel-other"), for: .normal)
+        button_choice.setBackgroundImage(UIImage.init(named: "syncart_round_check2New"), for: .selected)
+        button_choice.addTarget(self, action: #selector(chartHeaderView.btnOnclicked(sender:)), for: .touchUpInside)
+        contentView.addSubview(button_choice)
+        //iamgeView
+        img_store.frame = CGRect.init(x: 40, y: 10, width: 22, height: 22)
+        contentView.addSubview(img_store)
         //label
-        let label = UILabel.init(frame: CGRect.init(x: 40, y: 5, width: rect.size.width-90, height: 20))
-        label.text = "京东购物"
-        contentView.addSubview(label)
+        name_store.frame = CGRect(x: 66, y: 10, width: rect.size.width-50, height: 22)
+        contentView.addSubview(name_store)
     }
     func btnOnclicked(sender: UIButton) {
         sender.isSelected = !sender.isSelected

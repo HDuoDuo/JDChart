@@ -8,9 +8,10 @@ import SwiftyJSON
 
 class Sorted : NSObject, NSCoding{
 
-	var item : Item!
+	var item : Item?
 	var itemType : Int!
-
+    var items: Items?
+    
 
 	/**
 	 * Instantiate the instance using the passed json values to set the properties values
@@ -19,11 +20,18 @@ class Sorted : NSObject, NSCoding{
 		if json.isEmpty{
 			return
 		}
+        itemType = json["itemType"].intValue
+        
 		let itemJson = json["item"]
 		if !itemJson.isEmpty{
-			item = Item(fromJson: itemJson)
+            if itemType==1 {
+                item = Item(fromJson: itemJson)
+            }else {
+                items = Items(fromJson: itemJson)
+            }
+			
 		}
-		itemType = json["itemType"].intValue
+		
 	}
 
 	/**
@@ -33,7 +41,7 @@ class Sorted : NSObject, NSCoding{
 	{
 		var dictionary = [String:Any]()
 		if item != nil{
-			dictionary["item"] = item.toDictionary()
+			dictionary["item"] = item?.toDictionary()
 		}
 		if itemType != nil{
 			dictionary["itemType"] = itemType

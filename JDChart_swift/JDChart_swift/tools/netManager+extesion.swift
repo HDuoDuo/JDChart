@@ -11,17 +11,20 @@ import Foundation
 import SwiftyJSON
 extension netManager {
     //购物车数据
-    func getChartList(completion:@escaping (_ response: RootClass) -> ()) {
+    func getChartList(completion:@escaping (_ response: CartInfo) -> ()) {
         
         let pathf = Bundle.main.path(forResource: "chartString", ofType: "txt")!
         let jsonStr = try! String(contentsOfFile: pathf)
         
         
-        let jsonData = JSON.init(parseJSON: jsonStr)
+        let jsonData = JSON(parseJSON: jsonStr)
+        //获取CartInfoJson
+        let cartInfoJson = jsonData["cartInfo"]
+        if !cartInfoJson.isEmpty{
+            let cartInfoClass = CartInfo(fromJson: cartInfoJson)
+            completion(cartInfoClass)
+        }
         
-        let  rootClass = RootClass.init(fromJson: jsonData)
-        
-        completion(rootClass)
         
 //        mainRequest(urlStr: "https://api.m.jd.com/client.action?functionId=cart", httpMethod: .GET, parameters: nil, completion: { (isSuccess,response) in
 //            if isSuccess {
