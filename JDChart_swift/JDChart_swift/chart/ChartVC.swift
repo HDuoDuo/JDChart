@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-class ChartVC: UIViewController,UITableViewDelegate,UITableViewDataSource,headerDelegate {
+class ChartVC: UIViewController,UITableViewDelegate,UITableViewDataSource,headerDelegate,chartViewCellDelegate,mainCellDelegate {
     
     var viewModel = chartVM()//视图模型
     var tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), style: UITableViewStyle.plain)
@@ -79,23 +79,41 @@ class ChartVC: UIViewController,UITableViewDelegate,UITableViewDataSource,header
         if model.itemType == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "reuseChartViewCell", for: indexPath) as! chartViewCell
             cell.itemModel = model.item
+            cell.delegate = self
             return cell
             
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseMainCell", for: indexPath) as! mainCell
             cell.itemsModel = model.items
+        cell.delegate = self
             return cell
     }
     
-    //headerDelegate
+    //headerDelegate,chartViewCellDelegate,mainCellDelegate
     func btnOnclicked() {
         print("代理按钮就点击了")
     }
-    
-    
-    
-    
-    
+    func giftOnclicked(model: Gift) {
+        print("点击了赠品")
+    }
+    func promotionsOnclicked(models:[canSelectGift]) {
+        print("点击了优惠")
+    }
+    func choiceBtnOnclicked(model: Item) {
+        print("点击了选择圈")
+    }
+    func add_num(model: Item) {
+        print("点击加号")
+    }
+    func reduce_num(model: Item) {
+        print("点击了减号")
+    }
+    func service_choice(model: Item) {
+        print("点击了服务")
+    }
+    func exchageBtnOnclicked() {
+        print("点击了换购")
+    }
     func message() {
         print("点击消息")
     }

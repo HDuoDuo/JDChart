@@ -7,12 +7,12 @@
 //
 
 import UIKit
-protocol headerDelegate: NSObjectProtocol {
+protocol headerDelegate {
     func btnOnclicked()
 }
 class chartHeaderView: UITableViewHeaderFooterView {
     //代理
-    weak var delegate: headerDelegate?
+    var delegate: headerDelegate?
     var  name_store = UILabel()//商铺名称
     var img_store = UIImageView()
     

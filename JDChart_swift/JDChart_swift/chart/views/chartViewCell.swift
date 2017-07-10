@@ -7,9 +7,18 @@
 //
 
 import UIKit
-
-class chartViewCell: UITableViewCell,UITableViewDelegate,UITableViewDataSource {
+protocol chartViewCellDelegate {
+    func giftOnclicked(model: Gift)
+    func promotionsOnclicked(models:[canSelectGift])
+    func choiceBtnOnclicked(model: Item)
+    func add_num(model: Item)
+    func reduce_num(model: Item)
+    func service_choice(model: Item)
+}
+class chartViewCell: UITableViewCell,UITableViewDelegate,UITableViewDataSource,cellFooterDelegate {
     var tableView: UITableView?
+    var delegate: chartViewCellDelegate?
+    
     var itemModel: Item? {
         didSet {
             desc_good.text = itemModel!.weight
@@ -29,12 +38,16 @@ class chartViewCell: UITableViewCell,UITableViewDelegate,UITableViewDataSource {
 
     
     @IBAction func choiceBtnOnclicked(_ sender: UIButton) {
+        delegate?.choiceBtnOnclicked(model: itemModel!)
     }
     @IBAction func service_choice() {
+        delegate?.service_choice(model: itemModel!)
     }
     @IBAction func add_num() {
+        delegate?.add_num(model: itemModel!)
     }
     @IBAction func reduce_num() {
+        delegate?.reduce_num(model: itemModel!)
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -72,17 +85,23 @@ class chartViewCell: UITableViewCell,UITableViewDelegate,UITableViewDataSource {
             }else {
                 cell.model = itemModel!.gifts[indexPath.row]
             }
-        }        
+        }
+        cell.delegate = self
         return cell
     }
 
-    
+    //cell的代理
+    func access_btn_clicked(modelType: AnyObject) {
+        if modelType.isKind(of: Gift.self) {
+            delegate?.giftOnclicked(model: modelType as! Gift)
+        }else {
+            delegate?.promotionsOnclicked(models: itemModel!.canSelectPromotions)
+        }
+    }
 
     
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
 
 }

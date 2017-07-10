@@ -15,27 +15,30 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购满一件,即可换购优惠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqZ-Xc-l7K">
-                    <rect key="frame" x="39" y="12" width="127" height="15"/>
+                    <rect key="frame" x="39" y="12.5" width="127" height="15"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpf-Nv-sJP">
-                    <rect key="frame" x="298" y="6" width="37" height="27"/>
+                    <rect key="frame" x="298" y="6.5" width="37" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="去换购">
                         <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="exchageBtnOnclicked" destination="bTZ-cV-7NK" eventType="touchUpInside" id="LaJ-yA-bdD"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charge_unpay_view_go" translatesAutoresizingMaskIntoConstraints="NO" id="EKs-JT-eMt">
-                    <rect key="frame" x="337" y="14" width="8" height="12"/>
+                    <rect key="frame" x="337" y="14.5" width="8" height="12"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="8" id="4Hn-G8-OKm"/>
                         <constraint firstAttribute="height" constant="12" id="YW7-Jn-zrS"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="换购" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-qw-P6X">
-                    <rect key="frame" x="8" y="5" width="25" height="29"/>
+                    <rect key="frame" x="8" y="12.5" width="25" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -45,15 +48,19 @@
             <constraints>
                 <constraint firstItem="mpf-Nv-sJP" firstAttribute="centerY" secondItem="jqZ-Xc-l7K" secondAttribute="centerY" id="0tM-VY-f9a"/>
                 <constraint firstAttribute="trailing" secondItem="EKs-JT-eMt" secondAttribute="trailing" constant="18" id="17A-SF-Xn3"/>
-                <constraint firstAttribute="bottom" secondItem="N7T-qw-P6X" secondAttribute="bottom" constant="5" id="4nA-4s-cEw"/>
+                <constraint firstItem="N7T-qw-P6X" firstAttribute="centerY" secondItem="bTZ-cV-7NK" secondAttribute="centerY" id="QMv-Uc-boq"/>
                 <constraint firstItem="jqZ-Xc-l7K" firstAttribute="centerY" secondItem="N7T-qw-P6X" secondAttribute="centerY" id="Vec-ns-d6Q"/>
                 <constraint firstItem="jqZ-Xc-l7K" firstAttribute="leading" secondItem="N7T-qw-P6X" secondAttribute="trailing" constant="6" id="WBz-VZ-aak"/>
                 <constraint firstItem="EKs-JT-eMt" firstAttribute="centerY" secondItem="mpf-Nv-sJP" secondAttribute="centerY" id="c7E-bB-vqH"/>
                 <constraint firstItem="EKs-JT-eMt" firstAttribute="leading" secondItem="mpf-Nv-sJP" secondAttribute="trailing" constant="2" id="dej-gC-68T"/>
                 <constraint firstItem="N7T-qw-P6X" firstAttribute="leading" secondItem="bTZ-cV-7NK" secondAttribute="leading" constant="8" id="hpq-Xf-i29"/>
-                <constraint firstItem="N7T-qw-P6X" firstAttribute="top" secondItem="bTZ-cV-7NK" secondAttribute="top" constant="5" id="t6P-8r-idX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="exchange_btn" destination="mpf-Nv-sJP" id="rN7-b9-4o5"/>
+                <outlet property="suitDesc_label" destination="jqZ-Xc-l7K" id="0VO-Mk-noc"/>
+                <outlet property="suitTitle_label" destination="N7T-qw-P6X" id="0pl-zN-WXI"/>
+            </connections>
             <point key="canvasLocation" x="31.5" y="-88.5"/>
         </view>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

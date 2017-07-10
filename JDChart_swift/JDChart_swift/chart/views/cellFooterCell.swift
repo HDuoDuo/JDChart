@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
+protocol cellFooterDelegate: NSObjectProtocol {
+    func access_btn_clicked(modelType: AnyObject)
+}
 class cellFooterCell: UITableViewCell {
-    
+    var delegate: cellFooterDelegate?
     @IBOutlet weak var access_btn: UIButton!
     @IBOutlet weak var desc_label: UILabel!
     @IBOutlet weak var tltle_label: UILabel!
@@ -29,7 +31,7 @@ class cellFooterCell: UITableViewCell {
     }
     
     @IBAction func access_btn_onclicked() {
-        print("haha.点击了")
+        delegate?.access_btn_clicked(modelType: model!)
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,9 +39,7 @@ class cellFooterCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
 }
