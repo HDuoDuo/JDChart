@@ -13,7 +13,7 @@ class cellModel: NSObject {
     var awardType : Int!
     var checkType : Int!
     var discount : Double!
-    var gifts : [AnyObject]!
+    var gifts : [Gift]!
     var Id : String!
     var idForOldVersion : Int!
     var imgUrl : String!
@@ -32,7 +32,6 @@ class cellModel: NSObject {
     var isProvideService : Int!
     var isYb : Bool!
     var maxNum : Int!
-    var propertyTags : PropertyTag!
     var remainNum : String!
     var remainNumInt : Int!
     var weight : String!
@@ -51,10 +50,11 @@ class cellModel: NSObject {
         awardType = json["AwardType"].intValue
         checkType = json["CheckType"].intValue
         discount = json["Discount"].doubleValue
-        gifts = [AnyObject]()
+        gifts = [Gift]()
         let giftsArray = json["Gifts"].arrayValue
         for giftsJson in giftsArray{
-            gifts.append(giftsJson.stringValue as AnyObject)
+            let value = Gift(fromJson: giftsJson)
+            gifts.append(value)
         }
         Id = json["Id"].stringValue
         idForOldVersion = json["IdForOldVersion"].intValue
@@ -82,10 +82,6 @@ class cellModel: NSObject {
         isProvideService = json["isProvideService"].intValue
         isYb = json["isYb"].boolValue
         maxNum = json["maxNum"].intValue
-        let propertyTagsJson = json["propertyTags"]
-        if !propertyTagsJson.isEmpty{
-            propertyTags = PropertyTag(fromJson: propertyTagsJson)
-        }
         remainNum = json["remainNum"].stringValue
         remainNumInt = json["remainNumInt"].intValue
         weight = json["weight"].stringValue

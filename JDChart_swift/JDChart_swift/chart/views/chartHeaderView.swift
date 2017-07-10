@@ -29,7 +29,6 @@ class chartHeaderView: UITableViewHeaderFooterView {
     }
     //MARK UI
     func setupUI(_ rect: CGRect) {
-        print(rect)
         //btn
         let button_choice = UIButton.init(frame: CGRect.init(x: 8, y: 10, width: 22, height: 22))
         button_choice.setBackgroundImage(UIImage(named: "rankhome-icarousel-other"), for: .normal)

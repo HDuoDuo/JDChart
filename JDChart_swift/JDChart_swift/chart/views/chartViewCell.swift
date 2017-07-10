@@ -8,56 +8,77 @@
 
 import UIKit
 
-class chartViewCell: UITableViewCell {
-    
-    var model: Sorted? {
+class chartViewCell: UITableViewCell,UITableViewDelegate,UITableViewDataSource {
+    var tableView: UITableView?
+    var itemModel: Item? {
         didSet {
-            //绘制cell
-            self.setupUI(model: model!)
-        }
-    }
-    func setupUI(model: Sorted) {
-        if model.itemType == 1 {
-            //没有suitView
-            
-        }else {//有suitView
-            
-        }
-    }
-    //创建suitView
-    func setupSuit() {
-        let suitView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 30))
-        
-        let suitLabel = UILabel.init(frame: CGRect(x: 8, y: 5, width: 20, height: 20))
-        suitLabel.layer.borderColor = UIColor.red.cgColor
-        suitLabel.layer.borderWidth = 1
-        suitLabel.text = "换购"
-        suitView.addSubview(suitLabel)
-        
-        contentView.addSubview(suitView)
-    }
-    //创建gift
-    func setupGifts(gifts: [AnyObject]) {
-        //记录下一个gift的origin的y值
-        var giftY: CGFloat = 90
-        for gift in gifts {
-            let giftView = UIView.init(frame: CGRect.init(x: 0, y: giftY, width: UIScreen.main.bounds.size.width, height: 50))
-            
-            let giftLabel = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 60, height: 20))
-            giftLabel.text = "赠品"
-            
-            giftView.addSubview(giftLabel)
-            
-            giftY += 50
-            print(gift)
+            desc_good.text = itemModel!.weight
+            title_good.text = itemModel!.name
+            price_good.text = itemModel!.priceShow
+            num_good.text = String.init(format: "%d", itemModel!.num)
+            tableView?.reloadData()
         }
     }
     
+    @IBOutlet weak var choice_btn: UIButton!
+    @IBOutlet weak var img_good: UIImageView!
+    @IBOutlet weak var desc_good: UILabel!
+    @IBOutlet weak var title_good: UILabel!
+    @IBOutlet weak var price_good: UILabel!
+    @IBOutlet weak var num_good: UILabel!
+
     
+    @IBAction func choiceBtnOnclicked(_ sender: UIButton) {
+    }
+    @IBAction func service_choice() {
+    }
+    @IBAction func add_num() {
+    }
+    @IBAction func reduce_num() {
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupUI()
     }
+    func setupUI() {
+        tableView = UITableView()
+        tableView!.isScrollEnabled = false
+        tableView!.delegate = self
+        tableView!.dataSource = self
+        tableView!.separatorStyle = .none
+        //注册
+        tableView!.register(UINib(nibName: "cellFooterCell", bundle: nil), forCellReuseIdentifier: "reuseFooterCell")
+        contentView.addSubview(tableView!)
+    }
+
+    override func draw(_ rect: CGRect) {
+        
+         tableView!.frame = CGRect.init(x: 0, y: 100, width: rect.size.width, height: rect.size.height-100)
+    }
+    //MARK  UITableViewDelegate,UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemModel==nil ? 0 : (itemModel!.gifts.count+(itemModel!.canSelectPromotions.count>0 ? 1 : 0))
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        return itemModel==nil ? 0 : itemModel!.cellFooterHeight
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseFooterCell", for: indexPath) as! cellFooterCell
+        if itemModel != nil {
+            if indexPath.row >= (itemModel?.gifts.count)! {
+                cell.model = itemModel!.canSelectPromotions[indexPath.row-itemModel!.gifts.count]
+            }else {
+                cell.model = itemModel!.gifts[indexPath.row]
+            }
+        }        
+        return cell
+    }
+
+    
+
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

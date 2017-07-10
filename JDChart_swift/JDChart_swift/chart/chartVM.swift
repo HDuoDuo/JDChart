@@ -10,12 +10,27 @@ import UIKit
 
 class chartVM: NSObject {
     
-    var venders: [Vendor] = []
+    var venders: [Vendor]?
     
-    func getChartData(completion: @escaping (_ venders: [Vendor])->()) {
+    func getChartData(completion: @escaping (_ isSuccess: Bool)->()) {
         netManager.shared.getChartList {[weak self] (response) in
             self?.venders = response.vendors
-            completion(response.vendors)
+            completion(true)
         }
     }
+//    //数据处理
+//    func chartListData(venders: [Vendor]) {
+//        for vender in venders {
+//            var sectionArr: [AnyObject] = []
+//            for sorted in vender.sorted {
+//                if sorted.itemType == 1 {
+//                sectionArr.append(sorted.item!)
+//                }else {
+//                sectionArr.append(sorted.items!)
+//    
+//                }
+//            }
+//            cellModel.append(sectionArr)
+//        }
+//    }
 }

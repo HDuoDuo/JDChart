@@ -5,13 +5,15 @@
 import Foundation 
 import SwiftyJSON
 
-
 class Item : NSObject {
-
+    //cell的高度
+    var itemCellHeight: CGFloat!
+    var cellFooterHeight: CGFloat = 20
+    
 	var awardType : Int!
 	var checkType : Int!
 	var discount : Double!
-	var gifts : [AnyObject]!
+	var gifts : [Gift]!
 	var Id : String!
 	var idForOldVersion : Int!
 	var imgUrl : String!
@@ -23,17 +25,16 @@ class Item : NSObject {
 	var priceShow : String!
 	var rePrice : Double!
 	var tags : [AnyObject]!
-	var canSelectPromotions : [AnyObject]!
+	var canSelectPromotions : [canSelectGift]!
 	var cardSpecialId : Int!
 	var cid : Int!
 	var isBook : Bool!
 	var isProvideService : Int!
 	var isYb : Bool!
 	var maxNum : Int!
-	var propertyTags : PropertyTag!
 	var remainNum : String!
 	var remainNumInt : Int!
-	var specialId : String!
+    var weight : String!
 	var stockCode : Int!
 	var stockState : String!
 	var targetId : Int!
@@ -49,10 +50,14 @@ class Item : NSObject {
 		awardType = json["AwardType"].intValue
 		checkType = json["CheckType"].intValue
 		discount = json["Discount"].doubleValue
-		gifts = [AnyObject]()
+		gifts = [Gift]()
 		let giftsArray = json["Gifts"].arrayValue
-		for giftsJson in giftsArray{
-			gifts.append(giftsJson.stringValue as AnyObject)
+		for (index,giftJson) in giftsArray.enumerated(){
+            let value = Gift(fromJson: giftJson)
+            if index == 0 {
+                value.isNumberOne = true
+            }
+			gifts.append(value)
 		}
 		Id = json["Id"].stringValue
 		idForOldVersion = json["IdForOldVersion"].intValue
@@ -69,26 +74,29 @@ class Item : NSObject {
 		for tagsJson in tagsArray{
 			tags.append(tagsJson.stringValue as AnyObject)
 		}
-		canSelectPromotions = [AnyObject]()
+		canSelectPromotions = [canSelectGift]()
 		let canSelectPromotionsArray = json["canSelectPromotions"].arrayValue
-		for canSelectPromotionsJson in canSelectPromotionsArray{
-			canSelectPromotions.append(canSelectPromotionsJson.stringValue as AnyObject)
-		}
+		for (index,canSelectPromotionsJson) in canSelectPromotionsArray.enumerated(){
+            let value = canSelectGift.init(fromJson: canSelectPromotionsJson)
+            if index == 0 {
+                value.isNumberOne = true
+            }
+            canSelectPromotions.append(value)
+            
+        }
 		cardSpecialId = json["cardSpecialId"].intValue
 		cid = json["cid"].intValue
 		isBook = json["isBook"].boolValue
 		isProvideService = json["isProvideService"].intValue
 		isYb = json["isYb"].boolValue
 		maxNum = json["maxNum"].intValue
-		let propertyTagsJson = json["propertyTags"]
-		if !propertyTagsJson.isEmpty{
-			propertyTags = PropertyTag(fromJson: propertyTagsJson)
-		}
 		remainNum = json["remainNum"].stringValue
 		remainNumInt = json["remainNumInt"].intValue
-		specialId = json["specialId"].stringValue
+        weight = json["weight"].stringValue
 		stockCode = json["stockCode"].intValue
 		stockState = json["stockState"].stringValue
 		targetId = json["targetId"].intValue
+        //计算高度
+        itemCellHeight = 100 + CGFloat(gifts.count + (canSelectPromotions.count>0 ? 1:0)) * cellFooterHeight
 	}
 }

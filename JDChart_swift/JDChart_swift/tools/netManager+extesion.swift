@@ -26,7 +26,7 @@ extension netManager {
         }
         
         
-//        mainRequest(urlStr: "https://api.m.jd.com/client.action?functionId=cart", httpMethod: .GET, parameters: nil, completion: { (isSuccess,response) in
+//        mainRequest(urlStr: "https://api.m.jd.com/jfs/t3286/96/6144638446/464024/1d56672d/5896f890Ne7cd3fcd.jpg!q70.jpgclient.action?functionId=cart", httpMethod: .GET, parameters: nil, completion: { (isSuccess,response) in
 //            if isSuccess {
 //                completion(response!)
 //            }else {

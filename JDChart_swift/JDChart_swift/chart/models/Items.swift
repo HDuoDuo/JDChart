@@ -9,12 +9,14 @@ import Foundation
 import SwiftyJSON
 
 class Items: NSObject {
-    
-    var items : [cellModel]!
+    //cell的高度
+    var cellHeaderHeight: CGFloat = 30
+    var itemsCellHeight: CGFloat = 0
+    var items : [Item]!
     var discount : Double!
     var checkType : Int!
     var needMoney : Double!
-    var gifts : [AnyObject]!
+    var gifts : [Gift]!
     var Id : String!
     var suitType : Int!
     var promotionId : String!
@@ -39,19 +41,23 @@ class Items: NSObject {
         if json.isEmpty{
             return
         }
-        items = [cellModel]()
+        items = [Item]()
         let itemsArray = json["items"].arrayValue
         for itemsJson in itemsArray{
-            let value = cellModel(fromJson: itemsJson)
-            items.append(value)
+            let itemJson = itemsJson["item"]
+                let value = Item(fromJson: itemJson)
+                items.append(value)
         }
         checkType = json["CheckType"].intValue
         discount = json["Discount"].doubleValue
-        gifts = [AnyObject]()
+        gifts = [Gift]()
         let giftsArray = json["Gifts"].arrayValue
-        for giftsJson in giftsArray{
-            gifts.append(giftsJson.stringValue as AnyObject)
+        for giftJson in giftsArray{
+            let value = Gift(fromJson: giftJson)
+            print(value)
+            gifts.append(value)
         }
+
         needMoney = json["NeedMoney"].doubleValue
         Id = json["Id"].stringValue
         suitType = json["suitType"].intValue
@@ -79,6 +85,11 @@ class Items: NSObject {
         sType = json["SType"].intValue
         specialId = json["specialId"].stringValue
         sTip = json["STip"].stringValue
+        //计算高度
+        for singleItem in items {
+            itemsCellHeight += singleItem.itemCellHeight
+        }
+        itemsCellHeight += cellHeaderHeight
     }
 
 }

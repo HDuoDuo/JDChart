@@ -27,7 +27,8 @@ class ChartVC: UIViewController,UITableViewDelegate,UITableViewDataSource,header
         tableView.delegate = self
         tableView.dataSource = self
         //cell
-        tableView.register(chartViewCell.self, forCellReuseIdentifier: "reuseChartCell")
+        tableView.register(mainCell.self, forCellReuseIdentifier: "reuseMainCell")
+        tableView.register(UINib.init(nibName: "chartViewCell", bundle: nil), forCellReuseIdentifier: "reuseChartViewCell")
         //header
         tableView.register(chartHeaderView.self, forHeaderFooterViewReuseIdentifier: "reuseHeaderView")
         
@@ -51,7 +52,7 @@ class ChartVC: UIViewController,UITableViewDelegate,UITableViewDataSource,header
     //MARK  UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "reuseHeaderView") as! chartHeaderView
-        headerView.vender = viewModel.venders[section]
+        headerView.vender = viewModel.venders![section]
         headerView.delegate = self
         return headerView
     }
@@ -59,22 +60,32 @@ class ChartVC: UIViewController,UITableViewDelegate,UITableViewDataSource,header
         return 38
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.venders[section].sorted.count
+
+        return viewModel.venders![section].sorted.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.venders.count
+        return viewModel.venders!.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 20
+        let model = viewModel.venders![indexPath.section].sorted[indexPath.row]
+        if model.itemType == 1 {
+            return model.item!.itemCellHeight
+        }
+        return model.items!.itemsCellHeight
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseChartCell", for: indexPath)
-        return cell
+        let model = viewModel.venders![indexPath.section].sorted[indexPath.row]
+        
+        if model.itemType == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseChartViewCell", for: indexPath) as! chartViewCell
+            cell.itemModel = model.item
+            return cell
+            
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseMainCell", for: indexPath) as! mainCell
+            cell.itemsModel = model.items
+            return cell
     }
-    
-    
-    
-    
     
     //headerDelegate
     func btnOnclicked() {
