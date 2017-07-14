@@ -8,19 +8,20 @@
 
 import UIKit
 protocol headerDelegate {
-    func btnOnclicked()
+    func btnOnclicked(vender: Vendor)
 }
 class chartHeaderView: UITableViewHeaderFooterView {
     //代理
     var delegate: headerDelegate?
     var  name_store = UILabel()//商铺名称
     var img_store = UIImageView()
-    
+    var button_choice = UIButton()
     var vender: Vendor? {
         didSet {
             name_store.text = vender!.shopName
             let imgStr = vender!.vendorType == 0 ? "serviceComment_pop" : "serviceComment_jd"
             img_store.image = UIImage(named: imgStr)
+            button_choice.isSelected = vender!.isChoiced
         }
     }
     
@@ -30,7 +31,7 @@ class chartHeaderView: UITableViewHeaderFooterView {
     //MARK UI
     func setupUI(_ rect: CGRect) {
         //btn
-        let button_choice = UIButton.init(frame: CGRect.init(x: 8, y: 10, width: 22, height: 22))
+        button_choice.frame = CGRect.init(x: 8, y: 10, width: 22, height: 22)
         button_choice.setBackgroundImage(UIImage(named: "rankhome-icarousel-other"), for: .normal)
         button_choice.setBackgroundImage(UIImage.init(named: "syncart_round_check2New"), for: .selected)
         button_choice.addTarget(self, action: #selector(chartHeaderView.btnOnclicked(sender:)), for: .touchUpInside)
@@ -44,6 +45,6 @@ class chartHeaderView: UITableViewHeaderFooterView {
     }
     func btnOnclicked(sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        delegate?.btnOnclicked()
+        delegate?.btnOnclicked(vender: vender!)
     }
 }

@@ -19,13 +19,11 @@
 		42099AB61F0E7BD2003AE054 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42099AB51F0E7BD2003AE054 /* Gift.swift */; };
 		4212CA191F0A571600882257 /* chartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212CA181F0A571600882257 /* chartHeaderView.swift */; };
 		4250398E1F0E085C00370686 /* chartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4250398D1F0E085C00370686 /* chartViewCell.swift */; };
-		425935181F10B76E00D78B2D /* cellFooterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425935171F10B76E00D78B2D /* cellFooterVC.swift */; };
 		4259351B1F10B7D100D78B2D /* cellFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425935191F10B7D100D78B2D /* cellFooterCell.swift */; };
 		4259351C1F10B7D100D78B2D /* cellFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4259351A1F10B7D100D78B2D /* cellFooterCell.xib */; };
 		4259351E1F10D76400D78B2D /* mainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259351D1F10D76400D78B2D /* mainCell.swift */; };
 		425935221F10E14400D78B2D /* cellTableViewheaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425935211F10E14400D78B2D /* cellTableViewheaderView.swift */; };
 		425935241F10E19500D78B2D /* cellTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425935231F10E19500D78B2D /* cellTableViewHeaderView.xib */; };
-		425AB8A91F0CCC6A00BF700D /* redBoderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425AB8A81F0CCC6A00BF700D /* redBoderLabel.swift */; };
 		425B6D2E1F0BCDE30010CC7D /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425B6D2D1F0BCDE30010CC7D /* Items.swift */; };
 		42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8BF1F06501400FE8974 /* AppDelegate.swift */; };
 		42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8C11F06501400FE8974 /* ViewController.swift */; };
@@ -34,7 +32,6 @@
 		42E0F8CA1F06501400FE8974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E0F8C81F06501400FE8974 /* LaunchScreen.storyboard */; };
 		42E0F8D51F06501400FE8974 /* JDChart_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8D41F06501400FE8974 /* JDChart_swiftTests.swift */; };
 		42E0F8E01F06501400FE8974 /* JDChart_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8DF1F06501400FE8974 /* JDChart_swiftUITests.swift */; };
-		42E0F8F01F065BB000FE8974 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8EF1F065BB000FE8974 /* ChartVC.swift */; };
 		42E0F8F21F06875400FE8974 /* chartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8F11F06875400FE8974 /* chartManager.swift */; };
 		42E0F8F41F068EC800FE8974 /* chartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8F31F068EC800FE8974 /* chartVM.swift */; };
 		42E0F8F71F068F1100FE8974 /* netManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F8F61F068F1100FE8974 /* netManager.swift */; };
@@ -71,13 +68,11 @@
 		42099AB51F0E7BD2003AE054 /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		4212CA181F0A571600882257 /* chartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartHeaderView.swift; sourceTree = "<group>"; };
 		4250398D1F0E085C00370686 /* chartViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewCell.swift; sourceTree = "<group>"; };
-		425935171F10B76E00D78B2D /* cellFooterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellFooterVC.swift; sourceTree = "<group>"; };
 		425935191F10B7D100D78B2D /* cellFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellFooterCell.swift; sourceTree = "<group>"; };
 		4259351A1F10B7D100D78B2D /* cellFooterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellFooterCell.xib; sourceTree = "<group>"; };
 		4259351D1F10D76400D78B2D /* mainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainCell.swift; sourceTree = "<group>"; };
 		425935211F10E14400D78B2D /* cellTableViewheaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellTableViewheaderView.swift; sourceTree = "<group>"; };
 		425935231F10E19500D78B2D /* cellTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellTableViewHeaderView.xib; sourceTree = "<group>"; };
-		425AB8A81F0CCC6A00BF700D /* redBoderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = redBoderLabel.swift; sourceTree = "<group>"; };
 		425B6D2D1F0BCDE30010CC7D /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		42E0F8BC1F06501400FE8974 /* JDChart_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDChart_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E0F8BF1F06501400FE8974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +87,6 @@
 		42E0F8DB1F06501400FE8974 /* JDChart_swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDChart_swiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E0F8DF1F06501400FE8974 /* JDChart_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDChart_swiftUITests.swift; sourceTree = "<group>"; };
 		42E0F8E11F06501400FE8974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42E0F8EF1F065BB000FE8974 /* ChartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
 		42E0F8F11F06875400FE8974 /* chartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartManager.swift; sourceTree = "<group>"; };
 		42E0F8F31F068EC800FE8974 /* chartVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartVM.swift; sourceTree = "<group>"; };
 		42E0F8F61F068F1100FE8974 /* netManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = netManager.swift; sourceTree = "<group>"; };
@@ -212,10 +206,8 @@
 				420634191F095337002220CA /* views */,
 				420633FB1F092431002220CA /* chartString.txt */,
 				42E655051F069C5100C2E1E5 /* models */,
-				42E0F8EF1F065BB000FE8974 /* ChartVC.swift */,
 				42E0F8F11F06875400FE8974 /* chartManager.swift */,
 				42E0F8F31F068EC800FE8974 /* chartVM.swift */,
-				425935171F10B76E00D78B2D /* cellFooterVC.swift */,
 			);
 			path = chart;
 			sourceTree = "<group>";
@@ -226,7 +218,6 @@
 				420633F91F08DB8C002220CA /* charles-ssl-proxying.p12 */,
 				42E0F8F61F068F1100FE8974 /* netManager.swift */,
 				420633F51F08B552002220CA /* netManager+extesion.swift */,
-				425AB8A81F0CCC6A00BF700D /* redBoderLabel.swift */,
 			);
 			name = Tools;
 			path = tools;
@@ -450,10 +441,8 @@
 			files = (
 				42E0F8F41F068EC800FE8974 /* chartVM.swift in Sources */,
 				420634151F0929A2002220CA /* Sorted.swift in Sources */,
-				425AB8A91F0CCC6A00BF700D /* redBoderLabel.swift in Sources */,
 				4206340C1F0929A2002220CA /* CartInfo.swift in Sources */,
 				4250398E1F0E085C00370686 /* chartViewCell.swift in Sources */,
-				42E0F8F01F065BB000FE8974 /* ChartVC.swift in Sources */,
 				42E0F8C21F06501400FE8974 /* ViewController.swift in Sources */,
 				42099AB61F0E7BD2003AE054 /* Gift.swift in Sources */,
 				42E0F8F21F06875400FE8974 /* chartManager.swift in Sources */,
@@ -461,7 +450,6 @@
 				425B6D2E1F0BCDE30010CC7D /* Items.swift in Sources */,
 				425935221F10E14400D78B2D /* cellTableViewheaderView.swift in Sources */,
 				4259351B1F10B7D100D78B2D /* cellFooterCell.swift in Sources */,
-				425935181F10B76E00D78B2D /* cellFooterVC.swift in Sources */,
 				420633F61F08B552002220CA /* netManager+extesion.swift in Sources */,
 				4212CA191F0A571600882257 /* chartHeaderView.swift in Sources */,
 				42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */,
@@ -631,6 +619,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -649,6 +638,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lliuhang.www.JDChart-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

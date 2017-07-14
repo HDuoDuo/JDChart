@@ -7,7 +7,7 @@ import SwiftyJSON
 
 
 class Vendor : NSObject {
-
+    var isChoiced: Bool = false
 	var fareType : Int!
 	var shopId : Int!
 	var shopName : String!

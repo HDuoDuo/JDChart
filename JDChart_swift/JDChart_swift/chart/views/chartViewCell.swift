@@ -25,6 +25,7 @@ class chartViewCell: UITableViewCell,UITableViewDelegate,UITableViewDataSource,c
             title_good.text = itemModel!.name
             price_good.text = itemModel!.priceShow
             num_good.text = String.init(format: "%d", itemModel!.num)
+            choice_btn.isSelected = itemModel!.isChoiced
             tableView?.reloadData()
         }
     }
@@ -38,6 +39,8 @@ class chartViewCell: UITableViewCell,UITableViewDelegate,UITableViewDataSource,c
 
     
     @IBAction func choiceBtnOnclicked(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        itemModel!.isChoiced = !itemModel!.isChoiced
         delegate?.choiceBtnOnclicked(model: itemModel!)
     }
     @IBAction func service_choice() {

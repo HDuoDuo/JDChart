@@ -9,7 +9,8 @@ class Item : NSObject {
     //cell的高度
     var itemCellHeight: CGFloat!
     var cellFooterHeight: CGFloat = 20
-    
+    //记录是否被选择
+    var isChoiced: Bool = false
 	var awardType : Int!
 	var checkType : Int!
 	var discount : Double!
