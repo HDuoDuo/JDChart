@@ -16,6 +16,7 @@
 		4206340F1F0929A2002220CA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634021F0929A2002220CA /* Item.swift */; };
 		420634151F0929A2002220CA /* Sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634081F0929A2002220CA /* Sorted.swift */; };
 		420634161F0929A2002220CA /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420634091F0929A2002220CA /* Vendor.swift */; };
+		42068C121F18BE5000004D37 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42068C111F18BE5000004D37 /* ChartVC.swift */; };
 		42099AB61F0E7BD2003AE054 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42099AB51F0E7BD2003AE054 /* Gift.swift */; };
 		4212CA191F0A571600882257 /* chartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212CA181F0A571600882257 /* chartHeaderView.swift */; };
 		4250398E1F0E085C00370686 /* chartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4250398D1F0E085C00370686 /* chartViewCell.swift */; };
@@ -65,6 +66,7 @@
 		420634021F0929A2002220CA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		420634081F0929A2002220CA /* Sorted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sorted.swift; sourceTree = "<group>"; };
 		420634091F0929A2002220CA /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		42068C111F18BE5000004D37 /* ChartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
 		42099AB51F0E7BD2003AE054 /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		4212CA181F0A571600882257 /* chartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartHeaderView.swift; sourceTree = "<group>"; };
 		4250398D1F0E085C00370686 /* chartViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewCell.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		42E0F8EE1F065B2900FE8974 /* chart */ = {
 			isa = PBXGroup;
 			children = (
+				42068C111F18BE5000004D37 /* ChartVC.swift */,
 				420634191F095337002220CA /* views */,
 				420633FB1F092431002220CA /* chartString.txt */,
 				42E655051F069C5100C2E1E5 /* models */,
@@ -455,6 +458,7 @@
 				42E0F8C01F06501400FE8974 /* AppDelegate.swift in Sources */,
 				4202E30E1F0F7A1D00F18235 /* canSelectGift.swift in Sources */,
 				420634161F0929A2002220CA /* Vendor.swift in Sources */,
+				42068C121F18BE5000004D37 /* ChartVC.swift in Sources */,
 				4259351E1F10D76400D78B2D /* mainCell.swift in Sources */,
 				42E0F8F71F068F1100FE8974 /* netManager.swift in Sources */,
 			);
